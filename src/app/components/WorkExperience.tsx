@@ -13,18 +13,22 @@ const WorkExperience = () => {
         <div className="flex items-center mb-2">
           <FaCode className="h-6 w-6 text-white mr-2" />
           <h3 className="text-2xl font-semibold text-white">
-            Front-End Developer
+            Frontend Developer Intern
           </h3>
         </div>
-        <p className="text-lg">Company Name</p>
-        <p className="text-gray-400">January 2023 - Present</p>
+        <p className="text-lg">Gikslab Indonesia</p>
+        <p className="text-gray-400">July 2023 - September 2023</p>
         <ul className="list-disc ml-5 mt-2">
-          <li>Developed user-friendly web applications using ReactJS.</li>
           <li>
-            Collaborated with designers and backend developers to implement
-            features.
+            Developing a company dashboard using ReactJS, including adding
+            notification settings, revamping the Task Detail design, improving
+            Task Detail functionality, making the Kanban board responsive, and
+            implementing the Task popup function.
           </li>
-          <li>Conducted code reviews to maintain code quality.</li>
+          <li>
+            Developing a company profile website using NextJS, including adding
+            a responsive design to the homepage.
+          </li>
         </ul>
       </div>
 
@@ -33,20 +37,14 @@ const WorkExperience = () => {
         <div className="flex items-center mb-2">
           <FaCode className="h-6 w-6 text-white mr-2" />
           <h3 className="text-2xl font-semibold text-white">
-            Front-End Developer
+            Researcher Intern
           </h3>
         </div>
-        <p className="text-lg">Company Name</p>
-        <p className="text-gray-400">June 2022 - December 2022</p>
+        <p className="text-lg">PT Telkom Indonesia (Persero)</p>
+        <p className="text-gray-400">Dec 2019 - May 2019</p>
         <ul className="list-disc ml-5 mt-2">
-          <li>
-            Assisted in developing web applications using HTML, CSS, and
-            JavaScript.
-          </li>
-          <li>
-            Participated in team meetings to discuss project requirements.
-          </li>
-          <li>Learned best practices in coding and web development.</li>
+          <li>Creating an automated script (bot) using UiPath.</li>
+          <li>Exploring RPA (Robotic Process Automation) materials.</li>
         </ul>
       </div>
     </div>

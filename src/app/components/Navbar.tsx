@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent p-4 w-full top-0 z-10 flex justify-center">
       {/* Wrapper dengan width terbatas dan alignment ke kiri pada mobile */}
-      <div className="w-full max-w-5xl flex flex-col md:flex-row md:justify-between items-start md:items-center md:px-0 px-4">
+      <div className="w-full text-xl max-w-5xl flex flex-col md:flex-row md:justify-between items-start md:items-center md:px-0 px-4">
         {/* Nama di kiri */}
         <div className="font-bold text-white mb-4 md:mb-0">
           <Link href="/">Reza Dwi Andrianto</Link>
