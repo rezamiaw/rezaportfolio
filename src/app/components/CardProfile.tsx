@@ -13,8 +13,8 @@ const CardProfile = () => {
         Bandung, West Java
       </p>
       <p className="text-lg">
-        Recent graduate with a Bachelor's degree in Informatics, with 4 months
-        of experience as a front-end developer. Experienced in mobile and web
+        Recent graduate with a Bachelors degree in Informatics, with 4 months of
+        experience as a front-end developer. Experienced in mobile and web
         application development, using programming languages such as HTML5, CSS,
         ReactJS, NextJS, and Flutter. My education has provided me with a strong
         understanding of technology.
