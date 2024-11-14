@@ -13,18 +13,18 @@ const Navbar = () => {
 
         <div className="w-full md:w-auto">
           <ul className="flex flex-col md:flex-row md:justify-end space-y-2 md:space-y-0 md:space-x-4 text-white">
-            <li>
+            {/* <li>
               <Link href="/about">About</Link>
             </li>
             <li>
               <Link href="/contact">Contact</Link>
-            </li>
+            </li> */}
             <li>
               <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="https://saweria.co/notkyuura"
                 target="_blank"
@@ -32,7 +32,7 @@ const Navbar = () => {
               >
                 Support
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
