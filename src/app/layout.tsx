@@ -1,12 +1,17 @@
-import React from "react";
+import { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 
-type LayoutProps = {
-  children: React.ReactNode; // Menambahkan tipe untuk children
+export const metadata: Metadata = {
+  title: "reza - frontend dev",
+  description: "Portfolio pribadi dan karya-karya saya",
 };
 
-const Layout = ({ children }: LayoutProps) => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
@@ -17,6 +22,4 @@ const Layout = ({ children }: LayoutProps) => {
       </body>
     </html>
   );
-};
-
-export default Layout;
+}

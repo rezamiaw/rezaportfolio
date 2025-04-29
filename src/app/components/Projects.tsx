@@ -12,6 +12,7 @@ const MyProjects = () => {
       image: "/images/aksun.png",
       skills: ["Dart", "C++", "Swift", "HTML"],
     },
+
     // {
     //   title: "Spotify Profile",
     //   description:
