@@ -1,5 +1,3 @@
-// src/components/MySkills.tsx
-
 import React from "react";
 import {
   FaReact,
@@ -8,17 +6,29 @@ import {
   FaHtml5,
   FaJs,
   FaPhp,
-} from "react-icons/fa"; // Mengimpor ikon dari React Icons
+} from "react-icons/fa";
 import {
   SiFlutter,
   SiDart,
   SiVuedotjs,
   SiNextdotjs,
   SiLaravel,
-} from "react-icons/si"; // Mengimpor ikon lainnya
+} from "react-icons/si";
 
-const MySkills = () => {
-  const skills = [
+type SkillType = {
+  name: string;
+  icon: React.ReactNode;
+};
+
+const SkillItem: React.FC<SkillType> = ({ name, icon }) => (
+  <div className="flex flex-col items-center bg-gray-700 p-2 rounded-md shadow-md hover:scale-105 transition-transform">
+    {icon}
+    <span className="mt-1 text-white text-sm">{name}</span>
+  </div>
+);
+
+const Skills: React.FC = () => {
+  const skills: SkillType[] = [
     {
       name: "HTML",
       icon: <FaHtml5 className="h-6 w-6 text-orange-600" />,
@@ -73,20 +83,12 @@ const MySkills = () => {
     <div className="max-w-4xl w-full text-left mt-10 p-4 rounded-lg">
       <h2 className="text-4xl font-bold mb-4 text-white">My Skills</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {" "}
-        {/* Menggunakan grid responsif */}
         {skills.map((skill, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center bg-gray-700 p-2 rounded-md shadow-md hover:scale-105 transition-transform"
-          >
-            {skill.icon}
-            <span className="mt-1 text-white text-sm">{skill.name}</span>
-          </div>
+          <SkillItem key={index} name={skill.name} icon={skill.icon} />
         ))}
       </div>
     </div>
   );
 };
 
-export default MySkills;
+export default Skills;
