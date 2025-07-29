@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="bg-transparent p-4 w-full top-0 z-10 flex justify-center"
+       className="bg-transparent p-4 w-full top-0 z-10 flex justify-center"
     >
       <motion.div className="w-full text-xl max-w-5xl flex flex-col md:flex-row md:justify-between items-start md:items-center md:px-0 px-4">
         <motion.div

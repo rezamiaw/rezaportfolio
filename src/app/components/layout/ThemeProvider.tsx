@@ -35,6 +35,24 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       root.setAttribute("data-theme", theme);
     }
     
+    // Update theme-color meta tag for Safari
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      const newColor = (theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)) 
+        ? "#111111" 
+        : "#ffffff";
+      themeColorMeta.setAttribute("content", newColor);
+    }
+    
+    // Update apple-mobile-web-app-status-bar-style for iOS Safari
+    const statusBarMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+    if (statusBarMeta) {
+      const barStyle = (theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches))
+        ? "black-translucent"
+        : "default";
+      statusBarMeta.setAttribute("content", barStyle);
+    }
+    
     localStorage.setItem("theme", theme);
   }, [theme]);
 

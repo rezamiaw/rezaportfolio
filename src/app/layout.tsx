@@ -8,6 +8,16 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    viewportFit: "cover",
+  },
+  other: {
+    "theme-color": "#ffffff",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+  },
 };
 
 export default function RootLayout({
@@ -16,7 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      </head>
       <body>
         <ThemeProvider>
           <header>

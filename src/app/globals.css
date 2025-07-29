@@ -229,3 +229,50 @@ img {
 .contain-style {
   contain: style;
 }
+
+/* Safari-specific fixes for theme colors */
+@supports (-webkit-appearance: none) {
+  /* Force Safari to recognize color scheme changes */
+  :root {
+    color-scheme: light;
+  }
+  
+  [data-theme="dark"] {
+    color-scheme: dark;
+  }
+  
+  /* Ensure proper color inheritance on Safari */
+  nav, header {
+    color: var(--foreground) !important;
+    background-color: var(--background) !important;
+  }
+  
+  /* Fix for Safari backdrop-filter */
+  .backdrop-blur-md {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+  
+  /* Ensure Safari respects CSS variables */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* iOS Safari safe area handling */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  nav {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+}
+
+/* Force re-render when theme changes on Safari */
+[data-theme] * {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
