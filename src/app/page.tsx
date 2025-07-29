@@ -40,7 +40,7 @@ const Home = () => {
       variants={pageVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-screen flex flex-col items-center justify-start text-foreground p-4"
+      className="min-h-screen flex flex-col items-center justify-start text-foreground p-4 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800"
     >
       <motion.div
         variants={containerVariants}

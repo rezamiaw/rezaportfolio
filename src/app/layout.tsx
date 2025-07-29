@@ -5,6 +5,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "reza - frontend dev",
   description: "Portfolio pribadi dan karya-karya saya",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
