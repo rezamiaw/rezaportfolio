@@ -38,7 +38,7 @@ const Footer = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className="w-full py-6 mt-10"
+      className="w-full py-3 mt-1"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -47,7 +47,7 @@ const Footer = () => {
         >
           <motion.div
             variants={itemVariants}
-            className="mb-4 md:mb-0"
+            className="mb-2 md:mb-0"
           >
             <motion.p
               initial={{ opacity: 0 }}

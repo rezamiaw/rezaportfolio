@@ -55,13 +55,14 @@ html {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
   font-family: "Monocraft", monospace;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background 0.3s ease, background-image 0.3s ease;
   overflow-x: hidden;
   /* Enable hardware acceleration */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  min-height: 100vh;
 }
 
 /* Ensure proper color inheritance for links */
@@ -150,7 +151,7 @@ img {
 
 /* Smooth transitions for theme changes */
 *, *::before, *::after {
-  transition-property: color, background-color, border-color;
+  transition-property: color, background-color, background, background-image, border-color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
