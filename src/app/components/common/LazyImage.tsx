@@ -7,7 +7,6 @@ interface LazyImageProps {
   src: string;
   alt: string;
   className?: string;
-  placeholder?: string;
   blurDataURL?: string;
   width?: number;
   height?: number;
@@ -19,7 +18,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className = "",
-  placeholder = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzIyMjIyMiIvPjx0ZXh0IHg9IjEwMCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Mb2FkaW5nLi4uPC90ZXh0Pjwvc3ZnPg==",
   width,
   height,
   onLoad,

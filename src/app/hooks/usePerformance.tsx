@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 // Hook for debouncing values
 export const useDebounce = <T,>(value: T, delay: number): T => {
@@ -20,7 +20,7 @@ export const useDebounce = <T,>(value: T, delay: number): T => {
 };
 
 // Hook for throttling functions
-export const useThrottle = <T extends (...args: any[]) => any>(
+export const useThrottle = <T extends (...args: unknown[]) => unknown>(
   fn: T,
   delay: number
 ): T => {
@@ -162,7 +162,10 @@ export const usePerformanceMonitor = () => {
     
     let memoryUsage = 0;
     if ('memory' in performance) {
-      memoryUsage = (performance as any).memory.usedJSHeapSize / (1024 * 1024);
+      const performanceWithMemory = performance as Performance & {
+        memory?: { usedJSHeapSize: number };
+      };
+      memoryUsage = (performanceWithMemory.memory?.usedJSHeapSize || 0) / (1024 * 1024);
     }
 
     setMetrics({
@@ -194,7 +197,8 @@ export const useOptimizedScroll = (callback: () => void, delay = 100) => {
   }, [throttledCallback]);
 };
 
-export default {
+// Named export object to avoid anonymous default export
+export const performanceHooks = {
   useDebounce,
   useThrottle,
   useIntersectionObserver,
